@@ -73,7 +73,7 @@
                 "Property": "PAR_INTERNAL_NUMBER"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
