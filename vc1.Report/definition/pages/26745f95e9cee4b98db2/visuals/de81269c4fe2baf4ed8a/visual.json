@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
   "name": "de81269c4fe2baf4ed8a",
   "position": {
-    "x": 346.69165885660732,
-    "y": 139.15651358950328,
+    "x": 55.182755388940954,
+    "y": 79.175257731958766,
     "z": 0,
     "height": 405.47328959700093,
     "width": 502.64292408622305,
@@ -59,6 +59,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_GEN_DIM_PGR_CHANGES"
+                  }
+                },
+                "Property": "PAR_INTERNAL_NUMBER"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "drillFilterOtherVisuals": true
