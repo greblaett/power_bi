@@ -1,0 +1,10 @@
+relationship 7e710f82-7da2-49e8-b9a0-72d6c6559a95
+	joinOnDateBehavior: datePartOnly
+	fromColumn: V_GEN_DIM_PGR_CHANGES.PAR_VALID_FROM
+	toColumn: LocalDateTable_69e02458-3968-47e5-b69c-e116a897902c.Date
+
+relationship 5876fbfc-05e4-49e2-b4c8-3fc0afee95df
+	joinOnDateBehavior: datePartOnly
+	fromColumn: V_GEN_DIM_PGR_CHANGES.PAR_VALID_TO
+	toColumn: LocalDateTable_8c985c72-b9ea-48b8-96bb-9b73640bfbf0.Date
+

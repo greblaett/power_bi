@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
+  "name": "de81269c4fe2baf4ed8a",
+  "position": {
+    "x": 346.69165885660732,
+    "y": 139.15651358950328,
+    "z": 0,
+    "height": 405.47328959700093,
+    "width": 502.64292408622305,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_GEN_DIM_PGR_CHANGES"
+                    }
+                  },
+                  "Property": "MED_ACCOUNT_ROWID"
+                }
+              },
+              "queryRef": "V_GEN_DIM_PGR_CHANGES.MED_ACCOUNT_ROWID",
+              "nativeQueryRef": "MED_ACCOUNT_ROWID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_GEN_DIM_PGR_CHANGES"
+                    }
+                  },
+                  "Property": "PAR_CUSTOMER_GROUP"
+                }
+              },
+              "queryRef": "V_GEN_DIM_PGR_CHANGES.PAR_CUSTOMER_GROUP",
+              "nativeQueryRef": "PAR_CUSTOMER_GROUP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_GEN_DIM_PGR_CHANGES"
+                    }
+                  },
+                  "Property": "PAR_INTERNAL_NUMBER"
+                }
+              },
+              "queryRef": "V_GEN_DIM_PGR_CHANGES.PAR_INTERNAL_NUMBER",
+              "nativeQueryRef": "PAR_INTERNAL_NUMBER"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

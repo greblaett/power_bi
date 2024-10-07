@@ -1,0 +1,101 @@
+table V_GEN_DIM_PGR_CHANGES
+	lineageTag: 3e00d3be-fe26-428c-b257-f880193d95f4
+
+	column MED_ACCOUNT_ROWID
+		dataType: string
+		lineageTag: 8fb810f5-e284-4ea3-b13d-de82709fb03a
+		summarizeBy: none
+		sourceColumn: MED_ACCOUNT_ROWID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_INTERNAL_NUMBER
+		dataType: string
+		lineageTag: af0aed77-6c61-4ce4-801b-84acda336a84
+		summarizeBy: none
+		sourceColumn: PAR_INTERNAL_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_NAME
+		dataType: string
+		lineageTag: 50f7a208-4746-44b8-90cb-c1e5f4cda220
+		summarizeBy: none
+		sourceColumn: PAR_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_CUSTOMER_GROUP
+		dataType: string
+		lineageTag: 8612524e-433e-4d76-b482-ac37304ca6da
+		summarizeBy: none
+		sourceColumn: PAR_CUSTOMER_GROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_IS_ACTIVE_STATUS
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 45e95593-cd34-42a9-838d-65538627265e
+		summarizeBy: none
+		sourceColumn: PAR_IS_ACTIVE_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_PGR
+		dataType: string
+		lineageTag: 7f41f629-ce81-44e8-ab29-d1fc015a0e3a
+		summarizeBy: none
+		sourceColumn: PAR_PGR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_IS_ACTIVE_PGR_STATUS
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 24047d15-fe17-4815-921b-d7aa81e8609c
+		summarizeBy: none
+		sourceColumn: PAR_IS_ACTIVE_PGR_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_VALID_FROM
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5a8d275c-91d5-491c-b5b0-090b537139e2
+		summarizeBy: none
+		sourceColumn: PAR_VALID_FROM
+
+		variation Variation
+			isDefault
+			relationship: 7e710f82-7da2-49e8-b9a0-72d6c6559a95
+			defaultHierarchy: LocalDateTable_69e02458-3968-47e5-b69c-e116a897902c.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAR_VALID_TO
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b65afca3-5a97-4751-ae44-33f81250a47d
+		summarizeBy: none
+		sourceColumn: PAR_VALID_TO
+
+		variation Variation
+			isDefault
+			relationship: 5876fbfc-05e4-49e2-b4c8-3fc0afee95df
+			defaultHierarchy: LocalDateTable_8c985c72-b9ea-48b8-96bb-9b73640bfbf0.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	partition V_GEN_DIM_PGR_CHANGES = m
+		mode: import
+		source =
+				let
+				    Quelle = Exasol.Database("192.168.50.34/46FF98730610841F6F271180DEC20929DD51DBB8EB1E1B560A1E87501B88A126", "Yes"),
+				    MART_Schema = Quelle{[Name="MART",Kind="Schema"]}[Data],
+				    V_GEN_DIM_PGR_CHANGES_View = MART_Schema{[Name="V_GEN_DIM_PGR_CHANGES",Kind="View"]}[Data]
+				in
+				    V_GEN_DIM_PGR_CHANGES_View
+
+	annotation PBI_ResultType = Table
+

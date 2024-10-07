@@ -1,0 +1,23 @@
+model Model
+	culture: de-CH
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-CH
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["V_GEN_DIM_PGR_CHANGES"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.136.1202.0 (24.09)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table V_GEN_DIM_PGR_CHANGES
+ref table DateTableTemplate_69ffac4e-450d-40cd-865c-c657f18e53bc
+ref table LocalDateTable_69e02458-3968-47e5-b69c-e116a897902c
+ref table LocalDateTable_8c985c72-b9ea-48b8-96bb-9b73640bfbf0
+
+ref cultureInfo de-CH
+
